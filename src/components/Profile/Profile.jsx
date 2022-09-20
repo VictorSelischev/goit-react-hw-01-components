@@ -1,3 +1,5 @@
+import PropTypes, { checkPropTypes } from 'prop-types';
+
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   const { followers, views, likes } = stats;
 
@@ -38,4 +40,14 @@ Profile.defaultProps = {
   stats: { followers: 1000, views: 2000, likes: 3000 },
 };
 
-// Profile.propTypes = {};
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};
