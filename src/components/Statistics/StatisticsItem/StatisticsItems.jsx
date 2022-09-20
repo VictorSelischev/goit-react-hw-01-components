@@ -1,10 +1,10 @@
 export const StatisticsItems = ({ stats }) => {
   return (
     <ul class="stat-list">
-      {stats.map(stat => (
-        <li key={stat.id} class="item">
-          <span class="label">{stat.label}</span>
-          <span class="percentage">{stat.percentage}%</span>
+      {stats.map(({ id, label, percentage }) => (
+        <li key={ id } className="item">
+          <span className="label">{ label }</span>
+          <span className="percentage">{ percentage }%</span>
         </li>
       ))}
     </ul>

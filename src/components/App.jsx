@@ -21,7 +21,7 @@ export const App = () => {
         backgroundColor: '#e7ecf2',
       }}
     >
-      <Profile className = "section"
+      <Profile
         username={user.username}
         tag={user.tag}
         location={user.location}
