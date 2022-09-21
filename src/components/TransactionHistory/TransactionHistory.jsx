@@ -1,3 +1,5 @@
+import { Transaction } from './Transaction/Transaction';
+
 export const TransactionHistory = ({ items }) => {
   return (
     <table class="transaction-history">
@@ -10,16 +12,14 @@ export const TransactionHistory = ({ items }) => {
       </thead>
 
       <tbody>
-        <tr>
-          <td>Invoice</td>
-          <td>125</td>
-          <td>USD</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
-        </tr>
+        {items.map(({ id, type, amount, currency }) => (
+          <Transaction
+            key={id}
+            type={type}
+            amount={amount}
+            currency={currency}
+          />
+        ))}
       </tbody>
     </table>
   );
