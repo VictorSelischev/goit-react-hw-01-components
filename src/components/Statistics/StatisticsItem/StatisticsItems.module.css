@@ -1,20 +1,36 @@
 .stat_list {
-    display: flex;
+  display: flex;
+  border-radius: 8px;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
-    flex-basis: calc((100%) / 5);
+  flex-basis: calc((100%) / 5);
 }
 
-.label, .percentage {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    color: white;
+.item:first-child {
+  border-bottom-left-radius: 8px;
+}
+.item:last-child {
+  border-bottom-right-radius: 8px;
+}
 
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+.label,
+.percentage {
+  color: white;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.label {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 15px;
 }
